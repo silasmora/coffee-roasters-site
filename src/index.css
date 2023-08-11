@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply  pt-[15px] pb-[16px] px-[30px] rounded-md bg-darkCyan text-lightCream text-lg font-fraunces font-bold leading-6 hover:bg-darkCyanHover
+}
