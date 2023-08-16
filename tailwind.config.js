@@ -23,6 +23,7 @@ export default {
         paleOrange: '#FDD6BA',
         lightCream: '#FEFCF7',
         grey: '#83888F',
+        '2C343E': '#2C343E',
       },
       backgroundImage: {
         heroMobile: "url(images/home/mobile/image-hero-coffeepress.jpg)"

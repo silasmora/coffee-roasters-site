@@ -26,3 +26,8 @@ export {default as granEspresso} from './home/desktop/image-gran-espresso.png'
 export {default as granPlanalto} from './home/desktop/image-planalto.png'
 export {default as granPicollo} from './home/desktop/image-piccollo.png'
 export {default as granDanche} from './home/desktop/image-danche.png'
+
+//home, svg items//
+export {default as coffeeBean} from '../svgs/icon-coffee-bean.svg'
+export {default as gift} from '../svgs/icon-gift.svg'
+export {default as truck} from '../svgs/icon-truck.svg'
