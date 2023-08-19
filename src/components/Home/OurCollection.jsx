@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {granEspresso, granPlanalto, granPicollo, granDanche} from '../../images'
+import intersectionObserver from '../../scrollAnimations'
 
 const OurCollection = () => {
 
@@ -25,15 +26,20 @@ const OurCollection = () => {
       description: 'Ethiopian hand-harvested blend densely packed with vibrant fruit notes'
     },
   ]
+
+  useEffect(() => {
+    intersectionObserver()
+  }, [])
+
   return (
-     <>
+     <div className='hide-left'>
         <div className='relative pt-[27px] pb-[19px] opacity-60'>
           <div className='absolute inset-0 bg-gradient-to-b from-transparent to-lightCream'></div>
           <h1 className='text-grey text-center font-fraunces text-[40px] font-bold leading-[72px] md:text-[96px] lg:text-[150px]'>our collection</h1>
         </div>
         <div className='lg:flex md:-mt-10 lg:-mt-5 relative'>
         {items.map((item, idx) => (
-          <div key={idx} className='px-6 flex flex-col gap-6 justify-center items-center md:flex-row pb-12 lg:flex-col lg:w-1/4 lg:gap-0'>
+          <div key={idx} className='px-6 flex flex-col gap-6 justify-center items-center md:flex-row pb-12 lg:flex-col lg:w-1/4 lg:gap-0 lg:pb-0'>
             <img className='h-[150px] w-[200px] md:h-[193px] md:w-[256px]' src={item.imageSrc} />
             <div className='flex flex-col gap-4 md:w-[282px] md:-mt-14 lg:mt-[71px] lg:px-6'>
               <h2 className='text-darkGreyBlue text-center font-fraunces text-2xl font-bold leading-8 md:text-left lg:text-center'>{item.itemName}</h2>
@@ -42,7 +48,7 @@ const OurCollection = () => {
           </div>
         ))}
         </div>
-     </>
+     </div>
   )
 }
 

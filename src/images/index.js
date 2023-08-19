@@ -1,21 +1,3 @@
-//about section, mobile//
-export { default as bgQuality } from './about/mobile/bg-quality.png';
-export { default as imageCommitment } from './about/mobile/image-commitment.jpg';
-export { default as imageHeroWhitecup } from './about/mobile/image-hero-whitecup.jpg';
-export { default as imageQuality } from './about/mobile/image-quality.jpg';
-
-//about section, tablet//
-export { default as bgQualityTablet } from './about/tablet/bg-quality.png';
-export { default as imageCommitmentTablet } from './about/tablet/image-commitment.jpg';
-export { default as imageHeroWhitecupTablet } from './about/tablet/image-hero-whitecup.jpg';
-export { default as imageQualityTablet } from './about/tablet/image-quality.jpg';
-
-//about section, desktop//
-export { default as bgQualityDesktop } from './about/desktop/bg-quality.png';
-export { default as imageCommitmentDesktop } from './about/tablet/image-commitment.jpg';
-export { default as imageHeroWhitecupDesktop } from './about/desktop/image-hero-whitecup.jpg';
-export { default as imageQualityDesktop } from './about/desktop/image-quality.jpg';
-
 //home, mobile//
 export { default as heroMobile } from './home/mobile/image-hero-coffeepress.jpg'
 export { default as heroTablet } from './home/tablet/image-hero-coffeepress.jpg'
@@ -31,3 +13,28 @@ export {default as granDanche} from './home/desktop/image-danche.png'
 export {default as coffeeBean} from '../svgs/icon-coffee-bean.svg'
 export {default as gift} from '../svgs/icon-gift.svg'
 export {default as truck} from '../svgs/icon-truck.svg'
+export {default as circle} from '../svgs/icon-circle.svg'
+
+//about section, mobile//
+export { default as imageHeroWhitecupMobile } from './about/mobile/image-hero-whitecup.jpg';
+export { default as imageCommitmentMobile } from './about/mobile/image-commitment.jpg';
+export { default as imageQualityMobile } from './about/mobile/image-quality.jpg';
+
+//about section, tablet//
+export { default as imageHeroWhitecupTablet } from './about/tablet/image-hero-whitecup.jpg';
+export { default as imageCommitmentTablet } from './about/tablet/image-commitment.jpg';
+export { default as imageQualityTablet } from './about/tablet/image-quality.jpg';
+
+//about section, desktop//
+export { default as imageHeroWhitecupDesktop } from './about/desktop/image-hero-whitecup.jpg';
+export { default as imageCommitmentDesktop } from './about/desktop/image-commitment.jpg';
+export { default as imageQualityDesktop } from './about/desktop/image-quality.jpg';
+
+//plan section, mobile//
+export { default as imageHeroBlackcupMobile } from './plan/mobile/image-hero-blackcup.jpg';
+
+//plan section, tablet//
+export { default as imageHeroBlackcupTablet } from './plan/tablet/image-hero-blackcup.jpg';
+
+//plan section, desktop//
+export { default as imageHeroBlackcupDesktop } from './plan/desktop/image-hero-blackcup.jpg';

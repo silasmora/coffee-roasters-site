@@ -27,7 +27,24 @@ export default {
       },
       backgroundImage: {
         heroMobile: "url(images/home/mobile/image-hero-coffeepress.jpg)"
-      }
+      },
+      animation: {
+        bounce: 'bounce 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite',
+        
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(0) scale(1)',
+            opacity: 1,
+          },
+          '50%': {
+            transform: 'translateY(-10px) scale(1.1)',
+            opacity: 0.8
+          }
+        },
+        
+      },
     },
   },
   plugins: [],

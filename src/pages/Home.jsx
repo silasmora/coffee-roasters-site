@@ -6,7 +6,7 @@ import HowItWorks from '../components/Home/HowItWorks'
 
 const Home = () => {
   return (
-    <div className='px-6 md:px-10 lg:px-20 max-w-7xl mx-auto'>
+    <div className='px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto flex flex-col gap-[120px] pb-[120px] md:gap-[141px] md:pb-[141px] lg:gap-[200px] lg:pb-[200px]'>
       <Hero />
       <OurCollection />
       <WhyChooseUs />

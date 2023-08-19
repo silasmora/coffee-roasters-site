@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { coffeeBean, gift, truck } from '../../images'
+import intersectionObserver from '../../scrollAnimations'
 
 const WhyChooseUs = () => {
 
@@ -20,18 +21,27 @@ const WhyChooseUs = () => {
       description: 'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.'
     },
   ]
+
+  useEffect(() => {
+    intersectionObserver()
+  })
+
   return (
-    <div className=''>
-      <div className='bg-2C343E rounded-t-[10px] px-6 pt-16 pb-[28px] flex flex-col items-center justify-center md:bg-gray-800 md:pb-[12px]'>
+    <div className='relative hide-right'>
+      <div className='bg-2C343E h-3/5 rounded-[10px] absolute inset-0 lg:h-4/5'></div>
+
+    
+      <div className='relative bg-gray-700 rounded-t-[10px] px-6 pt-16 pb-[28px] flex flex-col items-center justify-center md:pb-[12px] md:bg-2C343E'>
         <h1 className='font-fraunces text-[28px] text-center text-lightCream font-bold leading-7 pb-6 md:text-[32px]'>Why Choose us?</h1>
-        <p className='text-[15px] text-center text-lightCream text-opacity-80 leading-[25px] md:px-12 lg:w-[56%]'>A large part of our role is choosing which particular coffees will be featured 
+        <p className='text-[15px] text-center text-lightCream text-opacity-80 leading-[25px] md:px-16 lg:w-[56%]'>A large part of our role is choosing which particular coffees will be featured 
         in our range. This means working closely with the best coffee growers to give 
         you a more impactful experience on every level.</p>
       </div>
-      <div className='bg-gray-800 h-[633px] rounded-b-[10px] p-6 md:p-[58px] md:h-[350px] lg:px-[85px] lg:flex gap-6 lg:h-[280px]'>
+      
+      <div className='relative rounded-b-[10px] pt-[36px] px-6 md:px-[58px] lg:px-[85px] md:pt-[58px] flex flex-col gap-6 lg:flex-row'>
         {reasonsToChooseUs.map((reason, idx) => (
-          <div key={idx} className='bg-darkCyan flex flex-col items-center justify-center gap-14 rounded-lg mb-6 px-[33px] pt-[72px] pb-[51px] md:flex-row md:py-[41px] md:px-[70px] lg:h-[382px] lg:flex-col lg:px-10 lg:py-0'>
-            <img className='h-[72px] w-[72px] md:h-[56px] md:w-[56px] lg:h-[72px] lg:w-[72px]' src={reason.img}/>
+          <div key={idx} className='bg-darkCyan flex flex-col items-center justify-center gap-14 rounded-lg px-[33px] pt-[72px] pb-[51px] md:flex-row md:py-[41px] md:px-[70px] lg:flex-col lg:px-10 lg:py-12 lg:mb-0'>
+            <img className='h-[72px] w-[72px] md:h-[56px] md:w-[56px] lg:h-[72px] lg:w-[72px] lg:mt-6' src={reason.img}/>
             <div className='flex flex-col gap-4'>
               <h1 className='text-lightCream text-center font-fraunces text-2xl font-bold leading-8 md:text-left lg:text-center'>{reason.name}</h1>
               <p className='text-lightCream text-center text-[15px] leading-[25px] md:text-left lg:text-center'>{reason.description}</p>
@@ -39,7 +49,6 @@ const WhyChooseUs = () => {
           </div>
         ))}
       </div>
-      <div className='h-[590px] md:h-[290px] lg:h-40' />
     </div>
   )
 }

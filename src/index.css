@@ -5,3 +5,16 @@
 .btn {
   @apply  pt-[15px] pb-[16px] px-[30px] rounded-md bg-darkCyan text-lightCream text-lg font-fraunces font-bold leading-6 hover:bg-darkCyanHover
 }
+
+.hide-left {
+  @apply opacity-0 transition-all duration-1000 ease-in-out transform translate-x-[-100%] blur
+}
+.hide-right {
+  @apply opacity-0 transition-all duration-1000 ease-in-out transform translate-x-[100%] blur
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
