@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { imageCommitmentMobile, imageCommitmentTablet, imageCommitmentDesktop } from '../../images'
+import intersectionObserver from '../../scrollAnimations'
 
 const OurCommitment = () => {
+
+  useEffect(() => {
+    intersectionObserver()
+  })
+
   return (
-    <div className='flex flex-col gap-12 md:flex-row md:gap-[69px] lg:gap-[125px] lg:px-[86px]'>
+    <div className='hide-left flex flex-col gap-12 md:flex-row md:gap-[69px] lg:gap-[125px] lg:px-[86px]'>
       <img className='md:hidden h-full w-full object-cover object-center rounded-lg' src={imageCommitmentMobile} alt='Our commitment image'/>
       <img className='hidden md:block h-full w-full object-cover object-center rounded-lg lg:hidden' src={imageCommitmentTablet} alt='Our commitment image'/>
       <img className='hidden lg:block h-full w-full object-cover object-center rounded-lg ' src={imageCommitmentDesktop} alt='Our commitment image'/>

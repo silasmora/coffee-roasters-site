@@ -30,7 +30,7 @@ export default {
       },
       animation: {
         bounce: 'bounce 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite',
-        
+        slideUp: 'slideUp 300ms ease-in-out 0s 1 normal forwards'
       },
       keyframes: {
         bounce: {
@@ -43,7 +43,14 @@ export default {
             opacity: 0.8
           }
         },
-        
+        slideUp: {
+          '0%': {
+            transform: 'translateY(0)'
+          },
+          '100%': {
+            transform: 'translateY(-10px)'
+          }
+        }
       },
     },
   },

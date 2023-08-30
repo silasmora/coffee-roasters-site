@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { imageQualityMobile, imageQualityTablet, imageQualityDesktop } from '../../images'
+import intersectionObserver from '../../scrollAnimations'
 
 const UncompromisingQuality = () => {
+
+  useEffect(() => {
+    intersectionObserver()
+  })
+
   return (
-    <div className='bg-2C343E rounded-[10px] px-6 pb-[61px] flex flex-col gap-16 md:pb-[67px] md:px-[74px] mt-20 md:mt-[160px] lg:flex-row lg:px-[85px] lg:mt-20 lg:gap-[125px]'>
+    <div className='hide-right bg-2C343E rounded-[10px] px-6 pb-[61px] flex flex-col gap-16 md:pb-[67px] md:px-[74px] mt-20 md:mt-[160px] lg:flex-row lg:px-[85px] lg:mt-20 lg:gap-[125px]'>
       <img className='md:hidden h-full w-full object-cover object-center rounded-lg -mt-20' src={imageQualityMobile} alt='Quality image'/>
       <img className='hidden md:block h-full w-full object-cover object-center rounded-lg -mt-40 lg:hidden' src={imageQualityTablet} alt='Quality image'/>
       <img className='hidden lg:block h-full w-full object-cover object-center rounded-lg -mt-20' src={imageQualityDesktop} alt='Quality image'/>

@@ -8,7 +8,6 @@ import Subscribe from './pages/Subscribe'
 
 function App() {
   
-
   return (
     <>
       <Header />

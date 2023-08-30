@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 .btn {
-  @apply  pt-[15px] pb-[16px] px-[30px] rounded-md bg-darkCyan text-lightCream text-lg font-fraunces font-bold leading-6 hover:bg-darkCyanHover
+  @apply  pt-[15px] pb-[16px] px-[30px] rounded-md bg-darkCyan text-lightCream text-lg font-fraunces font-bold leading-6 cursor-pointer hover:bg-darkCyanHover
+}
+
+.btn-disable {
+  @apply  pt-[15px] pb-[16px] px-[30px] rounded-md bg-gray-300 text-lightCream text-lg font-fraunces font-bold leading-6 cursor-not-allowed
 }
 
 .hide-left {
-  @apply opacity-0 transition-all duration-1000 ease-in-out transform translate-x-[-100%] blur
+  @apply opacity-0 transition-all duration-700 ease-in-out transform translate-x-[-100%] blur
 }
 .hide-right {
-  @apply opacity-0 transition-all duration-1000 ease-in-out transform translate-x-[100%] blur
+  @apply opacity-0 transition-all duration-700 ease-in-out transform translate-x-[100%] blur
 }
 
 .show {

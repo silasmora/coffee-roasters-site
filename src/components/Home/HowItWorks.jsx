@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import { Button } from '../Button'
 import { circle} from '../../images'
 import intersectionObserver from '../../scrollAnimations'
+import { useNavigate } from 'react-router-dom'
 
-const HowItWorks = () => {
+const HowItWorks = ({ isSubsribePage }) => {
 
   const steps = [
     {
@@ -30,27 +31,37 @@ const HowItWorks = () => {
     intersectionObserver()
   })
 
+  const navigate = useNavigate()
+
   return (
-    <div className='lg:px-[85px] hide-left'>
-      <h1 className='font-fraunces text-grey text-center text-2xl font-bold leading-8 pb-[80px] md:text-left md:pb-10 lg:pb-20'>How it works</h1>
-      <div className='md:flex'>
+    <div className={`lg:px-[85px] hide-left ${isSubsribePage && 'px-6 md:px-10 lg:px-20 bg-2C343E py-[100px] rounded-[10px]'}`}>
+      {!isSubsribePage && (
+        <h1 className='font-fraunces text-grey text-center text-2xl font-bold leading-8 pb-[80px] md:text-left md:pb-10 lg:pb-20'>How it works</h1>
+      )}
+      <div className='flex flex-col gap-[56px] md:flex-row md:gap-0'>
       {steps.map((step, idx) => (
-        <div key={idx} className='flex flex-col gap-6 mb-14 md:mb-[44px] lg:mb-16 md:gap-12 lg:gap-[67px]'>
+        <div key={idx} className={`flex flex-col gap-6 md:gap-12 lg:gap-[67px] ${!isSubsribePage && 'mb-14 md:mb-[44px] lg:mb-16'}`}>
           <div className='hidden md:flex items-center'>
-            <img className={`h-8 w-8 ${idx < 2 ? 'animate-wiggle' : ''}`} src={step.img} />
+            <img className={`h-8 w-8 ${isSubsribePage ? 'bg-2C343E' : 'bg-lightCream'}`} src={step.img} />
             {idx < 2 && <div className='border border-paleOrange h-[2px] w-full'></div>}
           </div>
           <div className='flex flex-col gap-6 md:gap-[42px] lg:gap-[38px]'>
             <h1 className='font-fraunces text-paleOrange text-center text-7xl font-bold leading-[72px] md:text-left md:-mt-[6px]'>{step.step}</h1>
-            <h3 className='font-fraunces text-darkGreyBlue text-[28px] text-center font-bold leading-8 md:text-left md:w-[85%] md:-mb-[10px] lg:w-1/2 lg:mb-[5px]'>{step.name}</h3>
-            <p className='text-darkGreyBlue text-[15px] text-center leading-[25px] md:text-left w-[95%] lg:w-[78%]'>{step.description}</p>
+            <h3 className={`font-fraunces text-darkGreyBlue text-[28px] text-center font-bold leading-8 md:text-left md:w-[85%] md:-mb-[10px] lg:w-1/2 lg:mb-[5px] ${isSubsribePage && 'text-lightCream'}`}>{step.name}</h3>
+            <p className={`text-darkGreyBlue text-[15px] text-center leading-[25px] md:text-left w-[95%] lg:w-[78%] ${isSubsribePage && 'text-lightCream'}`}>{step.description}</p>
           </div>
         </div>
       ))}
       </div>
-      <div className='text-center md:text-left'>
-        <Button animate={true} text='Create your plan'/>
-      </div>
+      {!isSubsribePage && (
+        <div className='text-center md:text-left'>
+          <Button 
+            animate={true} 
+            text='Create your plan' 
+            isHomePage={true} 
+            onClick={() => navigate('/subscribe')}/>
+        </div>
+      )}
     </div>
   )
 }

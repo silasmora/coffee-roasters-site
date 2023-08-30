@@ -14,6 +14,9 @@ export {default as coffeeBean} from '../svgs/icon-coffee-bean.svg'
 export {default as gift} from '../svgs/icon-gift.svg'
 export {default as truck} from '../svgs/icon-truck.svg'
 export {default as circle} from '../svgs/icon-circle.svg'
+export {default as unitedKingdom} from '../svgs/illustration-uk.svg'
+export {default as canada} from '../svgs/illustration-canada.svg'
+export {default as australia} from '../svgs/illustration-australia.svg'
 
 //about section, mobile//
 export { default as imageHeroWhitecupMobile } from './about/mobile/image-hero-whitecup.jpg';

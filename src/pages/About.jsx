@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Home/Hero'
 import OurCommitment from '../components/About/OurCommitment'
 import UncompromisingQuality from '../components/About/UncompromisingQuality'
+import { OurHeadquarters } from '../components/About/OurHeadquarters'
 
 const About = () => {
   return (
@@ -9,6 +10,7 @@ const About = () => {
       <Hero isAboutPage={true}/>
       <OurCommitment />
       <UncompromisingQuality />
+      <OurHeadquarters />
     </div>
   )
 }

@@ -3,10 +3,10 @@ import { heroMobile, heroTablet, heroDesktop } from '../../images'
 import { imageHeroWhitecupMobile, imageHeroWhitecupTablet, imageHeroWhitecupDesktop } from '../../images'
 import { imageHeroBlackcupMobile, imageHeroBlackcupTablet, imageHeroBlackcupDesktop  } from '../../images'
 import { Button } from '../Button'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = ({ isAboutPage, isSubsribePage, }) => {
  
-  
   let mobileImage
   let tabletImage
   let desktopImage
@@ -35,6 +35,9 @@ const Hero = ({ isAboutPage, isSubsribePage, }) => {
       header = 'Great coffee made simple.'
       content = 'Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.'
   }
+
+  const navigate = useNavigate()
+
   return (
     <div className='relative px-6 py-[100px] md:px-[58px] md:py-[104px] lg:py-[117px] lg:px-[86px]'>
       <img className='absolute md:hidden inset-0 h-full w-full object-cover object-center rounded-lg' src={mobileImage} />
@@ -46,7 +49,10 @@ const Hero = ({ isAboutPage, isSubsribePage, }) => {
         <p className='text-lightCream/50 text-center text-[15px] leading-6 md:text-left md:w-[65%] lg:w-[40%]'>{content}</p>
         {!isAboutPage && !isSubsribePage && (
           <div className='text-center mt-4 md:text-left lg:mt-6'>
-            <Button text='Create Your Plan'/>
+            <Button 
+              text='Create Your Plan' 
+              isHomePage={true} 
+              onClick={() => navigate('/subscribe')}/>
           </div>
         )}
       </div>
